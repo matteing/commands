@@ -33,9 +33,9 @@ if ($query[1]!=""){
 			$tags="";
 			foreach ($value["tags"] as $val){
 				if ($tags!=""){
-					$tags="".$tags.", ".$val[0]."";
+					$tags="".$tags.", ".$val."";
 				}else{
-					$tags="".$val[0]."";
+					$tags="".$val."";
 				}
 			}
 			echo "<div class='result_case'><div style='background:url(\"https://twiicdn.com/imgcache/?url=".urlencode($value["owner"]["profile_image"])."&size=100\");background-size: cover;background-position: 50% 50%;' class='result_image'></div><a href='".$value["link"]."' rel='nofollow'><div class='result_title'>".$value["title"]."</div></a><div class='result_description'>Asked by ".$value["owner"]["display_name"]." ".processtime($value["creation_date"])." ago.</div><div class='result_link'>".$tags."</div></div>";
