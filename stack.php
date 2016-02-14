@@ -24,13 +24,11 @@ function gzdecoder($d){
 }
 
 $result=gzdecoder(file_get_contents("http://api.stackexchange.com/2.2/search?order=desc&sort=activity&intitle=".urlencode($query[1])."&site=stackoverflow"));
-
 $obj = json_decode($result,true);
-print_r($obj);
-
+//--print_r($obj); //--uncomment for debug
 
 foreach ($obj["items"] as $value){
-	echo "<div style='padding:10px;border-bottom:1px solid #f1f1f1;'>".$value["title"]."</div>";
+	echo "<div class='result_case'><div style='background:url(\"https://twiicdn.com/imgcache/?url=".urlencode($value["owner"]["profile_image"])."&size=100\");background-size: cover;background-position: 50% 50%;' class='result_image'></div></div>";
 }
 
 ?>
