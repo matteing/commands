@@ -1,4 +1,6 @@
 <?php
+//Stack overflow search by Anthony Rossbach
+//http://api.stackexchange.com/docs/search#order=desc&sort=activity&intitle=google&filter=default&site=stackoverflow&run=true
 
 function gzdecoder($d){
     $f=ord(substr($d,3,1));
