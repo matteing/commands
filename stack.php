@@ -42,7 +42,7 @@ if ($query[1]!=""){
 		}
 	}
 }else{
-	echo "<h2 style='text-align:center;'>We need more info</h2>We can search StackOverflow for you, but we need something to search for";
+	echo "<div style='text-align:center;'><h2>We need more info</h2>We can search StackOverflow for you, but we need something to search for.</div>";
 }
 
 ?>
