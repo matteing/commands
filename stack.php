@@ -38,7 +38,7 @@ if ($query[1]!=""){
 					$tags="".$val[0]."";
 				}
 			}
-			echo "<div class='result_case'><div style='background:url(\"https://twiicdn.com/imgcache/?url=".urlencode($value["owner"]["profile_image"])."&size=100\");background-size: cover;background-position: 50% 50%;' class='result_image'></div><a href='".$value["link"]."' rel='nofollow'><div class='result_title'>".$value["title"]."</div></a><div class='result_description'>Asked by ".$value["owner"]["display_name"]." ".processtime($value["creation_date"])." ago.</div><div class='result_link'></div></div>";
+			echo "<div class='result_case'><div style='background:url(\"https://twiicdn.com/imgcache/?url=".urlencode($value["owner"]["profile_image"])."&size=100\");background-size: cover;background-position: 50% 50%;' class='result_image'></div><a href='".$value["link"]."' rel='nofollow'><div class='result_title'>".$value["title"]."</div></a><div class='result_description'>Asked by ".$value["owner"]["display_name"]." ".processtime($value["creation_date"])." ago.</div><div class='result_link'>".$tags."</div></div>";
 		}
 	}
 }else{
