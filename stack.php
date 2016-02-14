@@ -28,4 +28,9 @@ $result=gzdecoder(file_get_contents("http://api.stackexchange.com/2.2/search?ord
 $obj = json_decode($result,true);
 print_r($obj);
 
+
+foreach ($obj["items"] as $value){
+	echo "<div style='padding:10px;border-bottom:1px solid #f1f1f1;'>".$value["title"]."</div>";
+}
+
 ?>
