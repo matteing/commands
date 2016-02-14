@@ -8,7 +8,7 @@ $result = curl_exec($ch);
 curl_close($ch);
 
 echo "http://api.stackexchange.com/2.2/search?order=desc&sort=activity&intitle=".$query[1]."&site=stackoverflow";
-$obj = json_decode($result);
+$obj = json_decode($result,true);
 echo $result;
 print_r($obj);
 
